@@ -1,0 +1,33 @@
+\textbf{Question.} Contrast the definitions of Malthusian fitness and Darwinian fitness. Compare their solutions under a simple selection pressure.
+	
+	\textbf{Answer.} Suppose that in a haploid, one locus, two allele model, we have the alleles $A$ and $a$ occurring proportions $q_A$ and $q_a = 1-q_A$, respectively.
+
+In the Malthusian model, fitness of allele $A$ is described the value $F_A$, the expected number of offspring per individual with allele $A$. Therefore, the total number of individuals with allele $A$ can be modeled as 
+
+\[\dot{N}_A = F_AN_A\]
+
+and the proportion of individuals with allele $A$, $q_A$, evolves according to the continuous time described by
+
+\[\frac{dq_A}{dt} = \sigma q_A (1-q_A)\]
+
+where $\sigma$ denotes the difference in the fitnesses of individuals with the $A$ allele versus $a$ allele, i.e. $\sigma = F_A - F_a$. 
+
+This implies that $q_A(t)$ evolves according to equation
+
+\[q_A(t) = \frac{q_A(0) e^{\sigma t}}{1-q_A(0)_q_A(0)e^{\sigma t}}\]
+
+In contrast, the Darwinian model uses discrete time and with the mean fitness of the population being denoted by
+
+\[\overline{w} = q_{A}w_{A} + q_{a}w_{a}\]
+
+The mean frequency of $A$ in the next generation is
+
+\[q_A = \frac{w_{A}q_{A}}{\overline{w}}\]
+
+If we consider the evolution of $q_A(t)$ under Malthusian fitness over a single unit of time, we have
+
+\[q_A(t+1) = \frac{q_A(t)e^{\sigma}}{1-q_A(t)+q_A(t)e^{\sigma}}\]
+
+which is equivalent to the mean frequency given by Darwinian fitness assuming that $w_A = e^\sigma$ and $w_a = e^0 =1$.
+
+Note that in the lectures, Darwinian fitness is described using diploid genomes. This was adjusted for consistency with the Malthusian definition.
